@@ -1,0 +1,314 @@
+2022-09-08 12:45:35.542  INFO 1123596 --- [main] sevice.app.Application                   : Starting Application using Java 17.0.2 on vladislav-G5-5587 with PID 1123596 (/home/vladislav/IdeaProjects/magnit-master/build/classes/java/main started by vladislav in /home/vladislav/IdeaProjects/magnit-master)
+2022-09-08 12:45:35.543  INFO 1123596 --- [main] sevice.app.Application                   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 12:45:35.948  INFO 1123596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 12:45:36.009  INFO 1123596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 8 JPA repository interfaces.
+2022-09-08 12:45:36.360  INFO 1123596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 12:45:36.373  INFO 1123596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 12:45:36.373  INFO 1123596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 12:45:36.430  INFO 1123596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 12:45:36.430  INFO 1123596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 857 ms
+2022-09-08 12:45:36.547  INFO 1123596 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 12:45:36.580  INFO 1123596 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 12:45:36.679  INFO 1123596 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 12:45:36.735  INFO 1123596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 12:45:36.740  WARN 1123596 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.RuntimeException: Driver org.postgresql.Driver claims to not accept jdbcUrl, dbc:postgresql://localhost:5432/postgres
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:110) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:331) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at sevice.app.Application.main(Application.java:10) ~[main/:na]
+
+2022-09-08 12:45:36.741 ERROR 1123596 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-09-08 12:45:36.742  WARN 1123596 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-09-08 12:45:36.744  INFO 1123596 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-09-08 12:45:36.753  INFO 1123596 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-08 12:45:36.763 ERROR 1123596 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.3.jar:2.7.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.3.jar:2.7.3]
+	at sevice.app.Application.main(Application.java:10) ~[main/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.22.jar:5.3.22]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.22.jar:5.3.22]
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:138) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
+	... 33 common frames omitted
+
+2022-09-08 12:47:25.566  INFO 1124802 --- [main] sevice.app.Application                   : Starting Application using Java 17.0.2 on vladislav-G5-5587 with PID 1124802 (/home/vladislav/IdeaProjects/magnit-master/build/classes/java/main started by vladislav in /home/vladislav/IdeaProjects/magnit-master)
+2022-09-08 12:47:25.568  INFO 1124802 --- [main] sevice.app.Application                   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 12:47:25.996  INFO 1124802 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 12:47:26.068  INFO 1124802 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+2022-09-08 12:47:26.432  INFO 1124802 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 12:47:26.438  INFO 1124802 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 12:47:26.438  INFO 1124802 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 12:47:26.492  INFO 1124802 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 12:47:26.492  INFO 1124802 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 889 ms
+2022-09-08 12:47:26.601  INFO 1124802 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 12:47:26.630  INFO 1124802 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 12:47:26.725  INFO 1124802 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 12:47:26.791  INFO 1124802 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 12:47:26.948  INFO 1124802 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 12:47:26.967  INFO 1124802 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-08 12:47:27.505  INFO 1124802 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 12:47:27.511  INFO 1124802 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 12:47:27.987  INFO 1124802 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64df8422, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b30b627, org.springframework.security.web.context.SecurityContextPersistenceFilter@4edd8a0a, org.springframework.security.web.header.HeaderWriterFilter@10b5ff4d, org.springframework.security.web.authentication.logout.LogoutFilter@7c07023, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c552f08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@257d3968, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23cfdfa2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fa9971f, org.springframework.security.web.session.SessionManagementFilter@222eda8a, org.springframework.security.web.access.ExceptionTranslationFilter@3f78a5ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59c00722]
+2022-09-08 12:47:28.004  WARN 1124802 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 12:47:28.087  INFO 1124802 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-09-08 12:47:28.244  INFO 1124802 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 12:47:28.255  INFO 1124802 --- [main] sevice.app.Application                   : Started Application in 2.949 seconds (JVM running for 3.303)
+2022-09-08 12:47:44.686  INFO 1124802 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 12:47:44.686  INFO 1124802 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-08 12:47:44.687  INFO 1124802 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-08 12:55:46.330  INFO 1124802 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 12:55:46.331  INFO 1124802 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 12:55:46.341  INFO 1124802 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 12:55:53.959  INFO 1126377 --- [main] sevice.app.Application                   : Starting Application using Java 17.0.2 on vladislav-G5-5587 with PID 1126377 (/home/vladislav/IdeaProjects/magnit-master/build/classes/java/main started by vladislav in /home/vladislav/IdeaProjects/magnit-master)
+2022-09-08 12:55:53.961  INFO 1126377 --- [main] sevice.app.Application                   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 12:55:54.370  INFO 1126377 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 12:55:54.417  INFO 1126377 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 8 JPA repository interfaces.
+2022-09-08 12:55:54.766  INFO 1126377 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 12:55:54.773  INFO 1126377 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 12:55:54.773  INFO 1126377 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 12:55:54.835  INFO 1126377 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 12:55:54.835  INFO 1126377 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 846 ms
+2022-09-08 12:55:54.939  INFO 1126377 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 12:55:54.965  INFO 1126377 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 12:55:55.065  INFO 1126377 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 12:55:55.124  INFO 1126377 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 12:55:55.278  INFO 1126377 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 12:55:55.298  INFO 1126377 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-08 12:55:55.827  INFO 1126377 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 12:55:55.833  INFO 1126377 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 12:55:56.315  INFO 1126377 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64df8422, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b30b627, org.springframework.security.web.context.SecurityContextPersistenceFilter@4edd8a0a, org.springframework.security.web.header.HeaderWriterFilter@10b5ff4d, org.springframework.security.web.authentication.logout.LogoutFilter@7c07023, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c552f08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@257d3968, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23cfdfa2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fa9971f, org.springframework.security.web.session.SessionManagementFilter@222eda8a, org.springframework.security.web.access.ExceptionTranslationFilter@3f78a5ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59c00722]
+2022-09-08 12:55:56.332  WARN 1126377 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 12:55:56.410  INFO 1126377 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-09-08 12:55:56.560  INFO 1126377 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 12:55:56.568  INFO 1126377 --- [main] sevice.app.Application                   : Started Application in 2.884 seconds (JVM running for 3.266)
+2022-09-08 12:56:04.168  INFO 1126377 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 12:56:04.169  INFO 1126377 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-08 12:56:04.170  INFO 1126377 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-08 12:56:04.194  WARN 1126377 --- [http-nio-8080-exec-1] sevice.app.controller.LoginController    : Index was called
+2022-09-08 13:03:01.486  INFO 1126377 --- [http-nio-8080-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x02z0x010x000x02v0x030x03@0xaa)C0x9c0xdd0x970x0a0xed0xbd<ouUsO0x9dc0xfb0x16`0xdd{&D0x09$0xe2n0xb8X0xe4 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-09-08 13:06:45.814  INFO 1126377 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 13:06:45.815  INFO 1126377 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 13:06:45.822  INFO 1126377 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 13:06:55.823 DEBUG 1127856 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-09-08 13:06:55.832 DEBUG 1127856 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-09-08 13:06:55.837  INFO 1127856 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e47637c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@606f0f70, org.springframework.security.web.context.SecurityContextPersistenceFilter@254d8ef6, org.springframework.security.web.header.HeaderWriterFilter@7fa8fff, org.springframework.security.web.authentication.logout.LogoutFilter@5f14590c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60251ddb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72406594, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e1104f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a53ac0c, org.springframework.security.web.session.SessionManagementFilter@2175d53f, org.springframework.security.web.access.ExceptionTranslationFilter@180fb796, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16024b49]
+2022-09-08 13:06:55.854  WARN 1127856 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 13:07:30.629  INFO 1128001 --- [main] sevice.app.Application                   : Starting Application using Java 17.0.2 on vladislav-G5-5587 with PID 1128001 (/home/vladislav/IdeaProjects/magnit-master/build/classes/java/main started by vladislav in /home/vladislav/IdeaProjects/magnit-master)
+2022-09-08 13:07:30.631  INFO 1128001 --- [main] sevice.app.Application                   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 13:07:31.018  INFO 1128001 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 13:07:31.065  INFO 1128001 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 8 JPA repository interfaces.
+2022-09-08 13:07:31.422  INFO 1128001 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 13:07:31.435  INFO 1128001 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 13:07:31.435  INFO 1128001 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 13:07:31.495  INFO 1128001 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 13:07:31.495  INFO 1128001 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 837 ms
+2022-09-08 13:07:31.615  INFO 1128001 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 13:07:31.645  INFO 1128001 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 13:07:31.747  INFO 1128001 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 13:07:31.805  INFO 1128001 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 13:07:31.970  INFO 1128001 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 13:07:31.989  INFO 1128001 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-08 13:07:32.514  INFO 1128001 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 13:07:32.521  INFO 1128001 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 13:07:32.975 DEBUG 1128001 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-09-08 13:07:32.985 DEBUG 1128001 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-09-08 13:07:32.989  INFO 1128001 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fd00e10, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7be1e187, org.springframework.security.web.context.SecurityContextPersistenceFilter@222eda8a, org.springframework.security.web.header.HeaderWriterFilter@347f8029, org.springframework.security.web.authentication.logout.LogoutFilter@18918d70, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9734cae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c414eb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4edd8a0a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1107c465, org.springframework.security.web.session.SessionManagementFilter@630e5010, org.springframework.security.web.access.ExceptionTranslationFilter@1ce8084a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@453e1bba]
+2022-09-08 13:07:33.006  WARN 1128001 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 13:07:33.087  INFO 1128001 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-09-08 13:07:33.253  INFO 1128001 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 13:07:33.261  INFO 1128001 --- [main] sevice.app.Application                   : Started Application in 2.901 seconds (JVM running for 3.243)
+2022-09-08 13:07:43.085  INFO 1128001 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-08 13:07:43.085  INFO 1128001 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-08 13:07:43.086  INFO 1128001 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-08 13:07:43.094 DEBUG 1128001 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
+2022-09-08 13:07:43.097 DEBUG 1128001 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.098 DEBUG 1128001 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.098 DEBUG 1128001 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 63AB9D60E35FF46C0F59C2B3470091BA
+2022-09-08 13:07:43.102 DEBUG 1128001 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /login] with attributes [permitAll]
+2022-09-08 13:07:43.103 DEBUG 1128001 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
+2022-09-08 13:07:43.215 DEBUG 1128001 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.216 DEBUG 1128001 --- [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.217 DEBUG 1128001 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:43.240 DEBUG 1128001 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /dist/main.bundle.js?newversion
+2022-09-08 13:07:43.241 DEBUG 1128001 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.241 DEBUG 1128001 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.241 DEBUG 1128001 --- [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 63AB9D60E35FF46C0F59C2B3470091BA
+2022-09-08 13:07:43.241 DEBUG 1128001 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized public object filter invocation [GET /dist/main.bundle.js?newversion]
+2022-09-08 13:07:43.242 DEBUG 1128001 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /dist/main.bundle.js?newversion
+2022-09-08 13:07:43.249 DEBUG 1128001 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.264 DEBUG 1128001 --- [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.264 DEBUG 1128001 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:43.404 DEBUG 1128001 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /dist/ac54ba82adff5800ae2910c482f92dc2.png
+2022-09-08 13:07:43.404 DEBUG 1128001 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.404 DEBUG 1128001 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.405 DEBUG 1128001 --- [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 63AB9D60E35FF46C0F59C2B3470091BA
+2022-09-08 13:07:43.405 DEBUG 1128001 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized public object filter invocation [GET /dist/ac54ba82adff5800ae2910c482f92dc2.png]
+2022-09-08 13:07:43.405 DEBUG 1128001 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /dist/ac54ba82adff5800ae2910c482f92dc2.png
+2022-09-08 13:07:43.406 DEBUG 1128001 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /dist/415511fbd8874abc29a053903fd3c306.png
+2022-09-08 13:07:43.407 DEBUG 1128001 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.407 DEBUG 1128001 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.407 DEBUG 1128001 --- [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 63AB9D60E35FF46C0F59C2B3470091BA
+2022-09-08 13:07:43.407 DEBUG 1128001 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized public object filter invocation [GET /dist/415511fbd8874abc29a053903fd3c306.png]
+2022-09-08 13:07:43.407 DEBUG 1128001 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /dist/415511fbd8874abc29a053903fd3c306.png
+2022-09-08 13:07:43.407 DEBUG 1128001 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.408 DEBUG 1128001 --- [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.409 DEBUG 1128001 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.410 DEBUG 1128001 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /dist/ab26dcbd47091b563b937aa5762c803f.png
+2022-09-08 13:07:43.410 DEBUG 1128001 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.410 DEBUG 1128001 --- [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.409 DEBUG 1128001 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:43.410 DEBUG 1128001 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.410 DEBUG 1128001 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:43.411 DEBUG 1128001 --- [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 63AB9D60E35FF46C0F59C2B3470091BA
+2022-09-08 13:07:43.411 DEBUG 1128001 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized public object filter invocation [GET /dist/ab26dcbd47091b563b937aa5762c803f.png]
+2022-09-08 13:07:43.411 DEBUG 1128001 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /dist/ab26dcbd47091b563b937aa5762c803f.png
+2022-09-08 13:07:43.413 DEBUG 1128001 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.414 DEBUG 1128001 --- [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.414 DEBUG 1128001 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:43.421 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2022-09-08 13:07:43.422 DEBUG 1128001 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.422 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.422 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 63AB9D60E35FF46C0F59C2B3470091BA
+2022-09-08 13:07:43.422 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized public object filter invocation [GET /favicon.ico]
+2022-09-08 13:07:43.422 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2022-09-08 13:07:43.424 DEBUG 1128001 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.424 DEBUG 1128001 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.424 DEBUG 1128001 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:43.426 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2022-09-08 13:07:43.427 DEBUG 1128001 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:43.427 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-09-08 13:07:43.427 DEBUG 1128001 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2022-09-08 13:07:43.475 DEBUG 1128001 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.476 DEBUG 1128001 --- [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Did not store anonymous SecurityContext
+2022-09-08 13:07:43.477 DEBUG 1128001 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:07:45.318 DEBUG 1128001 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /login
+2022-09-08 13:07:45.319 DEBUG 1128001 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-09-08 13:07:45.594 DEBUG 1128001 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'adas'
+2022-09-08 13:07:45.601  INFO 1128001 --- [http-nio-8080-exec-7] s.a.s.l.AuthenticationEventListener      : Login attempt with username: adas [] asd adas 		Success: false
+2022-09-08 13:07:45.601 DEBUG 1128001 --- [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-09-08 13:07:45.601 DEBUG 1128001 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-09-08 13:10:17.675  INFO 1128001 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 13:10:17.676  INFO 1128001 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 13:10:17.682  INFO 1128001 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-08 13:11:23.287  INFO 1128673 --- [main] sevice.app.Application                   : Starting Application using Java 17.0.2 on vladislav-G5-5587 with PID 1128673 (/home/vladislav/IdeaProjects/magnit-master/build/classes/java/main started by vladislav in /home/vladislav/IdeaProjects/magnit-master)
+2022-09-08 13:11:23.289  INFO 1128673 --- [main] sevice.app.Application                   : No active profile set, falling back to 1 default profile: "default"
+2022-09-08 13:11:23.693  INFO 1128673 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-08 13:11:23.742  INFO 1128673 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 8 JPA repository interfaces.
+2022-09-08 13:11:24.088  INFO 1128673 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-08 13:11:24.101  INFO 1128673 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-08 13:11:24.101  INFO 1128673 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-08 13:11:24.159  INFO 1128673 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-08 13:11:24.160  INFO 1128673 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 839 ms
+2022-09-08 13:11:24.265  INFO 1128673 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-08 13:11:24.291  INFO 1128673 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-08 13:11:24.387  INFO 1128673 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-08 13:11:24.443  INFO 1128673 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-08 13:11:24.610  INFO 1128673 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-08 13:11:24.630  INFO 1128673 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-08 13:11:25.184  INFO 1128673 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-08 13:11:25.190  INFO 1128673 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 13:11:25.688  INFO 1128673 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e9ed4df, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@453e1bba, org.springframework.security.web.context.SecurityContextPersistenceFilter@267b678f, org.springframework.security.web.header.HeaderWriterFilter@4e826fd4, org.springframework.security.web.authentication.logout.LogoutFilter@73905dff, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10cb5047, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13731ff4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ce8084a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@aade5a2, org.springframework.security.web.session.SessionManagementFilter@46051269, org.springframework.security.web.access.ExceptionTranslationFilter@4c0ab04f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e1c5d1f]
+2022-09-08 13:11:25.707  WARN 1128673 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-08 13:11:25.789  INFO 1128673 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-09-08 13:11:25.952  INFO 1128673 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-08 13:11:25.960  INFO 1128673 --- [main] sevice.app.Application                   : Started Application in 2.938 seconds (JVM running for 3.285)
+2022-09-08 13:12:43.218  INFO 1128673 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-08 13:12:43.219  INFO 1128673 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-08 13:12:43.242  INFO 1128673 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

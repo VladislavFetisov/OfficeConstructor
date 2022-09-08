@@ -1,0 +1,15 @@
+# Project exclude paths
+/.gradle/
+/.idea/
+/build/
+/node_modules/
+/src/main/resources/static/dist/
+/node_modules/@xtuc/
+/node_modules/caniuse-lite/
+/node_modules/core-js-compat/
+/node_modules/css-loader/
+/node_modules/escalade/
+/node_modules/isexe/
+/node_modules/loose-envify/
+/node_modules/randombytes/
+/node_modules/shallow-clone/

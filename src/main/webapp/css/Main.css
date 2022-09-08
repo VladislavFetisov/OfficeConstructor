@@ -1,0 +1,733 @@
+/*** HEADER ***/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: fit-content;
+    min-width: 93%;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1% 3.5%;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.logo {
+    padding-left: 10px;
+    max-width: 286px;
+    max-height: 53px;
+}
+
+/* navigation */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: fit-content;
+}
+
+ul {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+ul li {
+    white-space: nowrap;
+    list-style: none;
+    margin: 0 30px;
+
+    font-family: PT, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+li img {
+    width: 40px;
+    padding-left: 30px;
+    border-left: 2px solid #ACACAC;
+}
+
+/*** MAIN ***/
+
+.main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+/* image */
+
+.image_box {
+    display: flex;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+.office {
+    display: inline-block;
+    padding: 2.5% 7%;
+    object-fit: cover;
+    margin: 0 auto 0 60px;
+    max-width: 70%;
+}
+
+/* log-in */
+
+.entrance_box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    margin-right: 85px;
+}
+
+h1 {
+    font-family: PT, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: right;
+    white-space: nowrap;
+    margin-bottom: 10px;
+
+    color: #000000;
+}
+
+p {
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: right;
+
+    color: #000000;
+}
+
+#description {
+    border-bottom: 5px solid red;
+    padding-bottom: 35px;
+}
+
+h2 {
+    font-family: PT, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #000000;
+}
+
+input {
+    text-align: center;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 2% 4%;
+    margin: 5px auto;
+    border: 1px solid #ACACAC;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+input:active {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.entrance_box button {
+    text-align: center;
+    width: 100%;
+    padding: 2% 4%;
+    margin-top: 15px;
+    border: 1px solid #ACACAC;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    background-color: red;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*** MISCELLANEOUS ***/
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+/*=====================================================HOME PAGE======================================================*/
+
+html, body, #react-mountpoint, #react-mountpoint>div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.pane {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+.homePage {
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    width: 75%;
+    height: 87%;
+    padding: 70px 120px 70px 120px;
+    justify-content: start;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+}
+
+.field {
+    height: 78%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    padding-top: 20px;
+    overflow-y: auto;
+    height: 88%;
+}
+
+h3 {
+    text-align: center;
+    font-family: PT, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+body::-webkit-scrollbar {
+    overflow: -moz-hidden-unscrollable;
+    width: 0;
+}
+
+.logo2 {
+    height: 80px;
+}
+
+.icon {
+    height: 60px;
+}
+
+/* ============= BUTTONS ============== */
+
+.tile {
+    flex: 1 1 auto;
+    margin: 20px;
+    padding: 30px 50px 30px 50px;
+    font-size: 22px;
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    transition: 0.8s;
+    background-size: 200% auto;
+    color: white;
+    width: 30%;
+    height: 150px;
+    background-image: linear-gradient(to right, rgba(227,6,19,1) 20%, rgba(255,84,37,1) 50%, rgba(227,6,19,1) 80%);
+    border-radius: 15px;
+    border-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tile:hover {
+    background-position: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.tile:active::after {
+    border-radius: 15px;
+    border-style: none;
+}
+
+.projects::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.projects::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.projects::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(227,6,19,1);
+}
+
+button:active{
+    transition: 0s;
+    outline: none;
+    box-shadow: 0 4px Gainsboro;
+    transform: translateY(2px);
+
+    border-color: white;
+    border-radius: 15px;
+    border-style: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.searchBar {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.searchBar label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.searchBar input {
+    text-align: center;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 2.5% 4%;
+    margin: 8px auto;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-family: Inter, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    box-shadow: none;
+}
+
+.searchBar button {
+    background: white;
+    border: none;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.searchBar img {
+    width: 25px;
+    padding-top: 4px;
+}
+
+/*==================================================PROJECT PAGE======================================================*/
+
+#contents {
+    margin: 60px 0 60px 0;
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.trash {
+    height: 40px;
+    width: 40px;
+    margin: 60px 0 60px 0;
+}
+
+/*=====================================================EDITOR=========================================================*/
+
+.contents_ed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.editor {
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 33%;
+}
+
+.header_ed {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 4%;
+    width: 94%;
+    padding: 2% 3%;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.logo_ed {
+    height: auto;
+    width: 13%;
+}
+
+.icon_ed {
+    width: 3.3%;
+    height: auto;
+}
+
+/* - - - - - Left Banner - - - - -*/
+
+.floors {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 15%;
+    height: 100%;
+    border: solid #ECEAEA;
+    border-width: 0 2px;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px 15px;
+    align-items: center;
+    border: solid;
+    border-width: 2px 0;
+    border-color: #E7E7E7;
+    min-width: fit-content;
+}
+
+#adder {
+    height: -moz-fit-content;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 36px;
+    text-align: center;
+    line-height: 44px;
+    background-color: white;
+    border: none;
+    width: -moz-fit-content;
+    color: black;
+    box-shadow: none;
+    margin: 0;
+}
+
+.holder {
+    padding: 5px 10px;
+}
+
+.floors p {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.floors button {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    color: black;
+    padding: 12px;
+    border: solid #ECEAEA;
+    border-width: 1px;
+    box-shadow: none;
+    border-radius: 1px;
+    margin: 2%;
+}
+
+/* - - - - - Workplace - - - - -*/
+
+.workplace {
+    background-size: auto;
+    background-repeat: repeat;
+    width: 70%;
+    height: 100%;
+}
+
+.workplace div {
+    width: inherit;
+    height: inherit;
+}
+
+/* - - - - - Right Banner - - - - -*/
+
+#save {
+    background-color: red;
+    color: white;
+}
+
+.items {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 12.5%;
+    height: 100%;
+    border: solid #ECEAEA;
+    border-width: 0 2px;
+    padding: 10px 20px;
+    background: white;
+}
+
+.buttonsArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.buttonsArea button {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    color: black;
+    padding: 12px;
+    border: solid #ECEAEA;
+    border-width: 1px;
+    box-shadow: none;
+    border-radius: 1px;
+    margin: 2%;
+}
+
+.textField_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-contents: space-around;
+    align-items: center;
+}
+
+.textField_buttons button{
+    text-align: center;
+    background: #FFFFFF;
+    width: 50%;
+    padding: 2% 4%;
+    margin: 5px auto;
+    border: solid #ECEAEA;
+    border-width: 1px;
+    box-shadow: none;
+    border-radius: 1px;
+    font-family: Inter, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.textField_buttons input {
+    width: 50%;
+    border: solid #ECEAEA;
+    border-width: 1px;
+    box-shadow: none;
+    border-radius: 1px;
+    margin: 5px auto;
+}
+
+.window label {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+}
+
+textarea {
+    width: 100%;
+    border: solid 1px #ECEAEA;
+}
+
+/* - - - - Update on changing names - - - - */
+/* - - - - - - PROJECT PAGE - - - - - - - - */
+.updateProject {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.updateProject input {
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    padding: 2.5% 4%;
+    margin: 8px 10px 8px 20px;
+    border: 2px solid #f7f7f7;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 25px;
+    color: black;
+    box-shadow: none;
+    background: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* - - - - - - - -EDITOR- - - - - - - - - - */
+.iconEd {
+    width: 40px;
+}
+
+.changeBuilding {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.changeBuilding input {
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    padding: 2.5% 4%;
+    margin: 8px 10px 8px 20px;
+    border: 2px solid #f7f7f7;
+    box-sizing: border-box;
+    border-radius: 0px;
+    font-size: 25px;
+    color: black;
+    box-shadow: none;
+    background: #FFFFFF;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.searchEditor {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.searchEditor input {
+    text-align: center;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 2.5% 4%;
+    margin: 8px auto;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-family: Inter, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    box-shadow: none;
+}
+
+.searchEditor button {
+    background: white;
+    border: none;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.searchEditor img {
+    width: 25px;
+    padding-top: 4px;
+}
+
+.saveButton {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.floor_ed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px 0;
+    align-items: center;
+    border: solid #ECEAEA;
+    border-width: 1px;
+    min-width: fit-content;
+}
+
+.floor_ed button {
+    width: -moz-fit-content;
+    border: none;
+}
+
+#deleteFloor {
+    width: -moz-fit-content;
+    border: none;
+}
