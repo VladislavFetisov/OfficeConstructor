@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import sevice.app.models.enums.areaName;
 import sevice.app.models.enums.State;
 
 import javax.persistence.*;
