@@ -4,13 +4,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.transaction.annotation.Transactional;
 import sevice.app.models.Area;
-import sevice.app.models.Building;
-import sevice.app.models.enums.areaName;
 
 import java.util.List;
-
+@RepositoryRestResource
 public interface AreaRepository extends JpaRepository<Area, Long> {
 
     List<Area> findAreasByFloorFloorId(Long floorId);

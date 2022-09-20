@@ -63,7 +63,7 @@ class HomePage extends Component {
             >
                 <div className="homePage">
                     <div className="header2">
-                        <img className="logo2" src={logo2} alt=""/>
+                        <img className="logo2"/>
                         <div className="searchBar">
                             <label>
                                 <input

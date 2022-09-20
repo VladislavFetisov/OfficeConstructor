@@ -5,12 +5,12 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.transaction.annotation.Transactional;
-import sevice.app.models.Building;
 import sevice.app.models.Floor;
 
 import java.util.List;
-
+@RepositoryRestResource
 public interface FloorRepository extends JpaRepository<Floor, Long>, JpaSpecificationExecutor<Floor> {
     Floor getFloorByFloorNumberAndBuildingBuildingId(Integer floorNumber, Long buildingId);
 
@@ -21,7 +21,4 @@ public interface FloorRepository extends JpaRepository<Floor, Long>, JpaSpecific
     @Modifying
     void deleteFloorById(@Param("floorId") Long id);
 
-
-    @Query(value = "select from floors where building_id=:buildingId", nativeQuery = true)
-    List<Floor> findFloorsByBuildingId(@Param("buildingId") Long id);
 }

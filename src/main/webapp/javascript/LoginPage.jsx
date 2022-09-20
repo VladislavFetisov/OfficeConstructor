@@ -91,7 +91,7 @@ class LoginPage extends Component {
         return(
             <div className="container">
                 <div className="header">
-                    <img className="logo" src={logo} alt="logo"/>
+                    <img className="logo"/>
                     <div className="nav">
                         <ul>
                             <li> 🕿  8 800 200-90-02</li>
